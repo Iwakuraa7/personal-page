@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>AUCA Women’s Digital Resource &amp; Community Platform</title>
+  <meta content="A digital safe space and community for AUCA women students." name="description" />
+  <!-- BEGIN: Font & Style Setup -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              primary: '#6c2bee', // Custom Theme Color
+              secondary: '#003366', // AUCA Blue
+              accent: '#FFD700', // AUCA Gold
+              danger: '#EF4444', // Quick Escape
+              soft: '#F3F0FF'
+            }
+          },
+          borderRadius: {
+            'custom': '8px', // ROUND_EIGHT
+          },
+          fontFamily: {
+            sans: ['Spline Sans', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <!-- Link to the external stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <!-- END: Font & Style Setup -->
+</head>
+
+<body class="font-sans text-gray-900 leading-relaxed">
+  <!-- BEGIN: Navigation & Hero -->
+  <header class="bg-white border-b sticky top-0 z-50 shadow-sm relative">
+    <nav class="container mx-auto px-4 py-4 flex flex-wrap items-center justify-between">
+      <div class="flex items-center space-x-2">
+        <!-- Placeholder for AUCA Eagle Logo -->
+        <div class="w-10 h-10 bg-brand-secondary rounded-full flex items-center justify-center overflow-hidden">
+          <img alt="AUCA Eagle Logo" class="w-full h-full object-cover"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCT3nu_h4YM0FDE8296m4us8rmyWkgazXVap6q2qLwyXzx63kFJdyXgN8tV67h7z4UKrTJkwrWYzplSy3IEwi7v2acCKxe568TkIGrPFaH7x8jGBPYJDPy1JCZdnqQRQjDlOBz8HQ3DJFPaeoa-j-mhs8s-tXxJ5-N_15wSMQZjUQ9NE2I4lqpQstcJ-vmURznhzHTtGnJHh246knaxFXb6zB2hoV932K89okGtXQaLv0DyF8qrXFf5lPZNgUh_f3MUkLNo_P_qJ9Cb" />
+        </div>
+        <span class="text-xl font-bold tracking-tight text-brand-secondary">AUCA Women</span>
+      </div>
+      <!-- Desktop Nav -->
+      <div class="hidden md:flex space-x-8 font-medium items-center ml-auto">
+        <a class="hover:text-brand-primary transition-colors" href="#community">Community</a>
+        <a class="hover:text-brand-primary transition-colors" href="#mentors">Mentors</a>
+        <a class="hover:text-brand-primary transition-colors" href="#opportunities">Opportunities</a>
+        <a class="hover:text-brand-primary transition-colors" href="#events">Events</a>
+        <a class="hover:text-brand-primary transition-colors" href="#safety">Safety</a>
+
+        <!-- Placeholder: Login/Register -->
+        <div class="border-l pl-6 ml-2 flex space-x-4 items-center" id="auth-placeholder">
+          <button class="text-brand-primary hover:text-brand-secondary font-semibold transition-colors"
+            onclick="alert('Login functionality coming soon!')">Login</button>
+          <button
+            class="bg-brand-primary text-white px-5 py-2 rounded-custom font-semibold hover:opacity-90 transition-opacity"
+            onclick="alert('Registration functionality coming soon!')">Register</button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button id="mobile-menu-toggle" aria-label="Open navigation menu"
+        class="md:hidden text-gray-600 focus:outline-none p-2 rounded-md hover:bg-gray-100 ml-auto">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Mobile Nav Slide Down -->
+    <div id="mobile-menu"
+      class="hidden absolute top-full left-0 w-full bg-white border-b shadow-lg py-4 px-6 flex-col space-y-4 font-medium md:hidden z-40 origin-top transform transition-transform duration-300">
+      <a class="hover:text-brand-primary transition-colors block mobile-nav-link" href="#community">Community</a>
+      <a class="hover:text-brand-primary transition-colors block mobile-nav-link" href="#mentors">Mentors</a>
+      <a class="hover:text-brand-primary transition-colors block mobile-nav-link"
+        href="#opportunities">Opportunities</a>
+      <a class="hover:text-brand-primary transition-colors block mobile-nav-link" href="#events">Events</a>
+      <a class="hover:text-brand-primary transition-colors block mobile-nav-link" href="#safety">Safety</a>
+
+      <!-- Placeholder: Login/Register Mobile -->
+      <div class="pt-4 border-t mt-4 flex flex-col space-y-3" id="auth-placeholder-mobile">
+        <button
+          class="w-full border-2 border-brand-primary text-brand-primary py-2 rounded-custom font-semibold hover:bg-brand-soft"
+          onclick="alert('Login functionality coming soon!')">Login</button>
+        <button class="w-full bg-brand-primary text-white py-2 rounded-custom font-semibold hover:opacity-90"
+          onclick="alert('Registration functionality coming soon!')">Register</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="bg-brand-soft py-16 md:py-24 overflow-hidden fade-up">
+    <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+      <div data-purpose="hero-text" class="text-center md:text-left order-2 md:order-1">
+        <span
+          class="inline-block px-3 py-1 bg-brand-primary/10 text-brand-primary rounded-full text-sm font-semibold mb-4">Empowering
+          AUCA Women</span>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-brand-secondary leading-tight mb-6">
+          Your Space to Grow, <br /><span class="text-brand-primary">Together.</span>
+        </h1>
+        <p class="text-lg text-gray-700 mb-8 max-w-lg mx-auto md:mx-0">
+          Connect with mentors, find exclusive opportunities, and participate in a community designed by and for the
+          women of AUCA.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <a class="bg-brand-primary text-white px-8 py-3 rounded-custom font-semibold hover:opacity-90 transition-opacity text-center"
+            href="#community">Join Discussion</a>
+          <a class="bg-white border-2 border-brand-primary text-brand-primary px-8 py-3 rounded-custom font-semibold hover:bg-brand-soft transition-colors text-center"
+            href="#safety">Safety Resources</a>
+        </div>
+      </div>
+      <div class="relative flex justify-center order-1 md:order-2" data-purpose="hero-image">
+        <div
+          class="w-full max-w-xs md:max-w-md aspect-square rounded-full bg-brand-accent/20 absolute -top-4 -right-4 animate-pulse">
+        </div>
+        <img alt="Students collaborating in a friendly environment"
+          class="relative z-10 w-full max-w-xs md:max-w-sm rounded-custom shadow-xl"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz3KjvABl5kwdydgkZeHDb099v_Yq-rBkG7XeUvpcRZczOuwVa296-HL1oYBtjtRusrkzjmgfFLk3DdmFCHBVQynjmqlvsz0c5EpklNxQmpZVzNXrayjVx3P2srqinQkk25nXIgoV5NfoNLKId4fsEp3-CGOMomMcNnXB15EfP8j0JhnZvicRJ6PI4jUR_T5zta-CV1UF5PaKE9lQJrV2Yu8zO75gEZqKisRQNtMYhkPYAsPO9SvYkRRCRARVU78Dlz5y6jfrnE-RS" />
+      </div>
+    </div>
+  </section>
+  <!-- END: Navigation & Hero -->
+
+  <main>
+    <!-- BEGIN: Section 1 - Community & Anonymous Discussion -->
+    <section class="py-16 bg-white" id="community">
+      <div class="container mx-auto px-4">
+        <div class="mb-10 text-center fade-up">
+          <h2 class="text-3xl font-bold text-brand-secondary mb-2">Community Voices</h2>
+          <p class="text-gray-600">Share your thoughts anonymously in a safe environment.</p>
+        </div>
+        <div class="grid lg:grid-cols-3 gap-8">
+          <!-- Submission Form -->
+          <div class="lg:col-span-1 bg-brand-soft p-6 rounded-custom fade-up" data-purpose="forum-input">
+            <h3 class="font-bold mb-4 text-brand-secondary">Start a Conversation</h3>
+            <form action="#" class="space-y-4" method="POST">
+              <label class="sr-only" for="post-content">Post Content</label>
+              <textarea
+                class="w-full border-0 focus:ring-2 focus:ring-brand-primary rounded-custom p-4 text-sm resize-none"
+                id="post-content" placeholder="What's on your mind?" rows="4"></textarea>
+              <button
+                class="w-full bg-brand-primary text-white py-2 rounded-custom font-medium hover:bg-opacity-90 transition transform hover:-translate-y-1"
+                type="submit">Post Anonymously</button>
+            </form>
+          </div>
+          <!-- Post Feed -->
+          <div class="lg:col-span-2 space-y-4" data-purpose="forum-feed">
+            <div class="cute-card bg-white p-6 rounded-custom shadow-sm fade-up" style="transition-delay: 100ms;">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-semibold uppercase tracking-wider text-brand-primary">Study Help</span>
+                <span class="text-xs text-gray-400">2 hours ago</span>
+              </div>
+              <p class="high-contrast-text font-medium italic">"Looking for a study buddy for ICP (Introduction to
+                Computing). Anyone else struggling with the latest lab?"</p>
+              <div class="mt-4 flex space-x-4">
+                <button class="text-xs text-gray-500 hover:text-brand-primary transition">Reply (3)</button>
+                <button class="text-xs text-gray-500 hover:text-red-500 transition">Support ❤️</button>
+              </div>
+
+              <!-- Placeholder: User Comments -->
+              <div class="mt-4 pt-4 border-t border-gray-100 hidden" id="comments-placeholder-1">
+                <p class="text-xs text-gray-400 italic">Comments will load here dynamically...</p>
+                <div class="flex mt-3">
+                  <input type="text"
+                    class="flex-1 border-gray-200 rounded-l-custom text-xs p-2 focus:ring-brand-primary focus:border-brand-primary"
+                    placeholder="Write a comment..." disabled>
+                  <button class="bg-gray-200 text-gray-500 px-3 rounded-r-custom text-xs font-semibold"
+                    disabled>Post</button>
+                </div>
+              </div>
+            </div>
+            <div class="cute-card bg-white p-6 rounded-custom shadow-sm fade-up" style="transition-delay: 200ms;">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-semibold uppercase tracking-wider text-brand-primary">Living in Bishkek</span>
+                <span class="text-xs text-gray-400">5 hours ago</span>
+              </div>
+              <p class="high-contrast-text font-medium italic">"Tips for adapting to Bishkek? I'm an international
+                student and feeling a bit overwhelmed by the traffic and local markets!"</p>
+              <div class="mt-4 flex space-x-4">
+                <button class="text-xs text-gray-500 hover:text-brand-primary transition">Reply (12)</button>
+                <button class="text-xs text-gray-500 hover:text-red-500 transition">Support ❤️</button>
+              </div>
+
+              <!-- Placeholder: User Comments -->
+              <div class="mt-4 pt-4 border-t border-gray-100 hidden" id="comments-placeholder-2">
+                <p class="text-xs text-gray-400 italic">Comments will load here dynamically...</p>
+                <div class="flex mt-3">
+                  <input type="text"
+                    class="flex-1 border-gray-200 rounded-l-custom text-xs p-2 focus:ring-brand-primary focus:border-brand-primary"
+                    placeholder="Write a comment..." disabled>
+                  <button class="bg-gray-200 text-gray-500 px-3 rounded-r-custom text-xs font-semibold"
+                    disabled>Post</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: Section 1 -->
+
+    <!-- BEGIN: Section 2 - Mentorship Directory -->
+    <section class="py-16 bg-brand-soft" id="mentors">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-brand-secondary mb-10 text-center fade-up">Connect with Mentors</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Mentor Cards -->
+          <div class="bg-white p-6 rounded-custom text-center cute-card shadow-sm fade-up"
+            style="transition-delay: 0ms;">
+            <img alt="Aisuluu" class="w-24 h-24 rounded-full mx-auto mb-4 border-2 border-brand-accent object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcaBl6PHWi2POYxb-QVxFrmYzcsjQV2LejU6nR5wN_CY3TQLnOP4vwOVvpnygiQcPlwK_7gkK59XYMS3uw1J9uMgIGCf7BNeeSTKUzlA_FRH1NHNnuEG2E8gwscBTeNThvVRUNVl0n6NRim4Ejwuyz6X7dHngjlPSFX8qvOSXTvelRmEX4JrIeowdrOedHEFB7VJ0vZPFnQxPhmBopXWhSNp259y4RtPfmKqDLSZxBbQLzcM89kXLu1V8yLGuK9hnVc0IJ_LSMHLMS" />
+            <h3 class="font-bold text-brand-secondary text-lg">Aisuluu</h3>
+            <p class="text-sm text-gray-600 mb-4 h-10 flex items-center justify-center">Business Administration</p>
+            <button
+              class="text-brand-primary font-bold text-sm border border-brand-primary rounded-custom px-4 py-2 hover:bg-brand-primary hover:text-white transition w-full shadow-sm">Contact</button>
+          </div>
+          <div class="bg-white p-6 rounded-custom text-center cute-card shadow-sm fade-up"
+            style="transition-delay: 100ms;">
+            <img alt="Elena" class="w-24 h-24 rounded-full mx-auto mb-4 border-2 border-brand-accent object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAI3JLMXni75fLu-T97t8aTi1PwR1KkEKGfOGf3W36evhfmXFjIhMZ9kvEqoiYkGcKaNd-3IkXcrFJqIS3h3LyK-qCEJIcUJ9zHDwssY7X5GigdcLoFRcsVUC_lO9AXFo0IorxjrkegtLsrWMv9hRVjMrIyaRv-7BQXfAEmhW9l9annKPGgHQELbMeLLkjjGJDZ4qfd0F7ffUB6LgJbDRNuIRJLUcPjosmLe--Xib3FvAkgSe33aqC_kOOvL71C2Eu4zf4xvoMi6cET" />
+            <h3 class="font-bold text-brand-secondary text-lg">Elena</h3>
+            <p class="text-sm text-gray-600 mb-4 h-10 flex items-center justify-center">Software Engineering</p>
+            <button
+              class="text-brand-primary font-bold text-sm border border-brand-primary rounded-custom px-4 py-2 hover:bg-brand-primary hover:text-white transition w-full shadow-sm">Contact</button>
+          </div>
+          <div class="bg-white p-6 rounded-custom text-center cute-card shadow-sm fade-up"
+            style="transition-delay: 200ms;">
+            <img alt="Zhibek" class="w-24 h-24 rounded-full mx-auto mb-4 border-2 border-brand-accent object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuA80P232cPny_7yumUJfHiITZrGtlXpKRNdy8aZ8HpYIsHD_oesgKDEjVoQv8wlEotdfkWKBA4iBosKAuJNOwwqPL8OxJ3Xob7NYbUcB8tliuARD9rWzK0Y9-1wZj8KL9xzSE0tuZK8xiMe2RvyMXei5ono1P8p70ckf4ezrYqu9yFTxGLYU1NftWRARaClVa23jSwLxd9NuSzjlk6iR_h_PWAZIsrZEDlfCy_k8qF6f5ZwOsEZ7NAjQXx1YVtKfMiLznEmI7IGCVat" />
+            <h3 class="font-bold text-brand-secondary text-lg">Zhibek</h3>
+            <p class="text-sm text-gray-600 mb-4 h-10 flex items-center justify-center">Economics</p>
+            <button
+              class="text-brand-primary font-bold text-sm border border-brand-primary rounded-custom px-4 py-2 hover:bg-brand-primary hover:text-white transition w-full shadow-sm">Contact</button>
+          </div>
+          <div class="bg-white p-6 rounded-custom text-center cute-card shadow-sm fade-up"
+            style="transition-delay: 300ms;">
+            <img alt="Marina" class="w-24 h-24 rounded-full mx-auto mb-4 border-2 border-brand-accent object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdbgz7YrgE4g4y4mLwSJTQdVgQbUErJAbXv01Wv7OWz_AoCoyihTmZlu2wExdi31ISj2bmJAxqCJ9cz04AYB90twrPUjyWX5Y9JXuH6jngj6l2RhM5jPu0YsNORlNxS3cvVTHOjw5uxXqIf1XHp4KOAnl7kkQJnYPfOqJclPch4RrKqs7wEy9zy0N64D6m2YTiPpfQCuov6boQM_OR8oMi4wg0DCwdyuLljrWwVZNNTRb21fMnMvwb2eXU4Bc0Q-_KY0ao0Fd7BNp_" />
+            <h3 class="font-bold text-brand-secondary text-lg">Marina</h3>
+            <p class="text-sm text-gray-600 mb-4 h-10 flex items-center justify-center">Psychology</p>
+            <button
+              class="text-brand-primary font-bold text-sm border border-brand-primary rounded-custom px-4 py-2 hover:bg-brand-primary hover:text-white transition w-full shadow-sm">Contact</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: Section 2 -->
+
+    <!-- BEGIN: Section 3 - Opportunity Board -->
+    <section class="py-16 bg-white" id="opportunities">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-brand-secondary mb-10 fade-up">Opportunity Board</h2>
+        <div class="overflow-x-auto bg-white rounded-custom border border-gray-100 shadow-sm fade-up">
+          <table class="min-w-full divide-y divide-gray-200" id="opportunity-table">
+            <thead class="bg-gray-50">
+              <tr class="text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                <th class="px-6 py-4 whitespace-nowrap">Program</th>
+                <th class="px-6 py-4 whitespace-nowrap hidden sm:table-cell">Category</th>
+                <th class="px-6 py-4 whitespace-nowrap">Type</th>
+                <th class="px-6 py-4 whitespace-nowrap text-right sm:text-left">Action</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+              <tr class="hover:bg-brand-soft/50 transition-colors">
+                <td class="px-6 py-4 text-sm font-bold text-gray-800">OSCE Academy (MA Programs)<br /><span
+                    class="text-xs text-gray-500 font-normal sm:hidden">External</span></td>
+                <td class="px-6 py-4 text-sm text-gray-600 hidden sm:table-cell">External</td>
+                <td class="px-6 py-4"><span
+                    class="bg-green-100 text-green-800 px-2 flex-inline whitespace-nowrap py-1 rounded-full text-xs font-semibold">Scholarship</span>
+                </td>
+                <td class="px-6 py-4 text-right sm:text-left"><a
+                    class="text-brand-primary hover:text-brand-secondary transition-colors font-semibold text-sm"
+                    href="#">Apply Now →</a></td>
+              </tr>
+              <tr class="hover:bg-brand-soft/50 transition-colors">
+                <td class="px-6 py-4 text-sm font-bold text-gray-800">Global UGRAD Exchange<br /><span
+                    class="text-xs text-gray-500 font-normal sm:hidden">External</span></td>
+                <td class="px-6 py-4 text-sm text-gray-600 hidden sm:table-cell">External</td>
+                <td class="px-6 py-4"><span
+                    class="bg-blue-100 text-blue-800 px-2 flex-inline whitespace-nowrap py-1 rounded-full text-xs font-semibold">Exchange</span>
+                </td>
+                <td class="px-6 py-4 text-right sm:text-left"><a
+                    class="text-brand-primary hover:text-brand-secondary transition-colors font-semibold text-sm"
+                    href="#">Apply Now →</a></td>
+              </tr>
+              <tr class="hover:bg-brand-soft/50 transition-colors">
+                <td class="px-6 py-4 text-sm font-bold text-gray-800">SILC Research Grants<br /><span
+                    class="text-xs text-gray-500 font-normal sm:hidden">Internal</span></td>
+                <td class="px-6 py-4 text-sm text-gray-600 hidden sm:table-cell">Internal</td>
+                <td class="px-6 py-4"><span
+                    class="bg-purple-100 text-purple-800 px-2 flex-inline whitespace-nowrap py-1 rounded-full text-xs font-semibold">Grant</span>
+                </td>
+                <td class="px-6 py-4 text-right sm:text-left"><a
+                    class="text-brand-primary hover:text-brand-secondary transition-colors font-semibold text-sm"
+                    href="#">Apply Now →</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <!-- END: Section 3 -->
+
+    <!-- BEGIN: Section 4 - Events & Workshops -->
+    <section class="py-16 bg-brand-soft" id="events">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-10 fade-up">
+          <div class="mb-4 sm:mb-0">
+            <h2 class="text-3xl font-bold text-brand-secondary">Upcoming Events</h2>
+            <p class="text-gray-600 mt-2">Don't miss out on local workshops and club meetings.</p>
+          </div>
+          <button
+            class="bg-white text-brand-primary px-6 py-2 rounded-custom font-semibold border-2 border-brand-primary hover:bg-brand-primary hover:text-white transition-colors w-full sm:w-auto shadow-sm">Full
+            Calendar</button>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- Event 1 -->
+          <div class="bg-white p-6 rounded-custom flex items-start sm:items-center shadow-sm cute-card fade-up">
+            <div
+              class="flex-shrink-0 bg-brand-accent text-brand-secondary w-16 h-16 rounded-custom flex flex-col items-center justify-center font-bold shadow-sm">
+              <span class="text-xl">15</span>
+              <span class="text-xs uppercase tracking-wider">Oct</span>
+            </div>
+            <div class="ml-6 flex-1">
+              <h3 class="font-bold text-lg text-brand-secondary leading-tight">Fatima Afghan Girls Club Meeting</h3>
+              <p class="text-sm text-gray-500 mt-1 flex items-center"><svg class="w-4 h-4 mr-1 inline-block" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>Room 220, 15:00 - 17:00</p>
+              <a class="text-brand-primary text-sm font-semibold mt-3 inline-block hover:underline" href="#">RSVP →</a>
+            </div>
+          </div>
+          <!-- Event 2 -->
+          <div class="bg-white p-6 rounded-custom flex items-start sm:items-center shadow-sm cute-card fade-up"
+            style="transition-delay: 100ms;">
+            <div
+              class="flex-shrink-0 bg-brand-primary text-white w-16 h-16 rounded-custom flex flex-col items-center justify-center font-bold shadow-sm">
+              <span class="text-xl">22</span>
+              <span class="text-xs uppercase tracking-wider">Oct</span>
+            </div>
+            <div class="ml-6 flex-1">
+              <h3 class="font-bold text-lg text-brand-secondary leading-tight">Resume &amp; Career Workshop</h3>
+              <p class="text-sm text-gray-500 mt-1 flex items-center"><svg class="w-4 h-4 mr-1 inline-block" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z">
+                  </path>
+                </svg>Online via Zoom, 18:00</p>
+              <a class="text-brand-primary text-sm font-semibold mt-3 inline-block hover:underline" href="#">Get Link
+                →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: Section 4 -->
+
+    <!-- BEGIN: Section 5 - Safety & Mental Health -->
+    <section class="py-16 bg-white" id="safety">
+      <div class="container mx-auto px-4 fade-up">
+        <div class="bg-brand-secondary text-white p-8 md:p-12 rounded-custom shadow-xl relative overflow-hidden">
+          <div class="absolute top-0 right-0 p-8 opacity-10 pointer-events-none hidden md:block">
+            <svg width="200" height="200" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V8.53l7-3.89v8.35z">
+              </path>
+            </svg>
+          </div>
+          <div class="grid lg:grid-cols-2 gap-12 items-center relative z-10">
+            <div>
+              <h2 class="text-3xl font-bold mb-4">Your Safety Matters</h2>
+              <p class="text-gray-300 mb-8 max-w-lg">Access professional support, counseling, and legal assistance
+                immediately. All services provided are confidential.</p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div
+                  class="p-5 border border-white/20 rounded-custom bg-white/5 backdrop-blur-sm hover:bg-white/10 transition">
+                  <h4 class="font-bold text-brand-accent mb-1">Counseling Office</h4>
+                  <p class="text-sm">Room #416, Main Campus</p>
+                  <p class="text-xs text-gray-400 mt-2">Available 9:00 - 18:00</p>
+                </div>
+                <div
+                  class="p-5 border border-white/20 rounded-custom bg-white/5 backdrop-blur-sm hover:bg-white/10 transition">
+                  <h4 class="font-bold text-brand-accent mb-1">Legal Clinic</h4>
+                  <p class="text-sm">Free legal consultation</p>
+                  <a class="text-sm font-semibold mt-2 inline-block text-brand-accent hover:underline" href="#">Book an
+                    appointment →</a>
+                </div>
+              </div>
+            </div>
+            <div class="bg-white text-brand-secondary p-8 rounded-custom shadow-2xl">
+              <h3 class="font-bold text-xl mb-6 flex items-center"><svg class="w-6 h-6 mr-2 text-brand-danger"
+                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
+                  </path>
+                </svg>Emergency Contacts</h3>
+              <ul class="space-y-4">
+                <li class="flex justify-between items-center border-b border-gray-100 pb-3">
+                  <span class="font-medium">Police</span>
+                  <a href="tel:102"
+                    class="font-extrabold text-2xl text-brand-danger hover:scale-110 transition-transform">102</a>
+                </li>
+                <li class="flex justify-between items-center border-b border-gray-100 pb-3">
+                  <span class="font-medium">Ambulance</span>
+                  <a href="tel:103"
+                    class="font-extrabold text-2xl text-brand-danger hover:scale-110 transition-transform">103</a>
+                </li>
+                <li class="flex justify-between items-center border-b border-gray-100 pb-3">
+                  <span class="font-medium">Fire Service</span>
+                  <a href="tel:101"
+                    class="font-extrabold text-2xl text-brand-danger hover:scale-110 transition-transform">101</a>
+                </li>
+              </ul>
+              <p class="mt-6 text-xs text-gray-500 italic bg-gray-50 p-2 rounded text-center">Tap any number on your
+                mobile device to call instantly.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: Section 5 -->
+
+    <!-- BEGIN: Section 6 - Student Stories -->
+    <section class="py-16 bg-brand-soft overflow-hidden">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-brand-secondary mb-12 text-center fade-up">Success Stories</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Story 1 -->
+          <div class="bg-white p-8 rounded-custom shadow-sm relative cute-card fade-up">
+            <div class="absolute -top-6 -left-2 text-brand-accent text-8xl font-serif opacity-20 pointer-events-none">"
+            </div>
+            <p class="italic text-gray-700 mb-8 relative z-10 leading-relaxed max-w-prose">"The mentorship program
+              helped me land my first internship at a major tech company. I didn't think it was possible as a freshman!"
+            </p>
+            <div class="flex items-center mt-auto">
+              <img alt="Student Profile" class="w-12 h-12 rounded-full mr-4 border-2 border-brand-primary object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdj_HZQ-Zahc2qWYosS8ClVnCPg5Rq2vWM-pqaeggohpBLZdDWof10xHFjUbQFotmWEFvWFarjLKMlQRiRsYC1TdoROzatVJtBcDukeF3PLG5arKOhoF13v5pBmggGT_gxUqD3kFcOuPIPwqaVZtte6ductxiI7qr_RwqtzF9WPM_krOIgTz6nLGO9BumX-dq3dcGLqK4bsFFEMBf07Kgg5y68Jxj03Su_185yJ2mJkGYy1rEIrNYnwNxjQfEOyB8o3-8zHafokCX5" />
+              <div>
+                <h4 class="font-bold text-sm text-brand-secondary">Adel, S'25</h4>
+                <p class="text-xs text-gray-500 font-medium">Software Engineering</p>
+              </div>
+            </div>
+          </div>
+          <!-- Story 2 -->
+          <div class="bg-white p-8 rounded-custom shadow-sm relative cute-card fade-up"
+            style="transition-delay: 100ms;">
+            <div class="absolute -top-6 -left-2 text-brand-accent text-8xl font-serif opacity-20 pointer-events-none">"
+            </div>
+            <p class="italic text-gray-700 mb-8 relative z-10 leading-relaxed max-w-prose">"Being part of the anonymous
+              forum made me realize I wasn't alone in my struggles. The community support is incredible."</p>
+            <div class="flex items-center mt-auto">
+              <img alt="Student Profile" class="w-12 h-12 rounded-full mr-4 border-2 border-brand-primary object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFTu6cUWlZnNsFoSx8gB_rcgkwzz25wlNvLKuch8jgplwXtiLnoRYs00sPJwEm8iXeQpRPnz8zKAH3q__RbD4DvrrCeevAoaN-rkvwjT3Tntch_Og1A48uCsZ0xLPDc1jcxUaISeJUrWkm_hJ9m8t9qJKISX-jiJHssrqB1H6DGScExjtkw0MOn7F--xdPaAkEQiI4oKCYq5bmvCpPJyvMBP8LUNCNm8sXGDpCmPF3dioSqrcqZIc2mhWQFlYPHX0Fq9T8Qnr0mgnh" />
+              <div>
+                <h4 class="font-bold text-sm text-brand-secondary">Kamila, S'24</h4>
+                <p class="text-xs text-gray-500 font-medium">International Relations</p>
+              </div>
+            </div>
+          </div>
+          <!-- Story 3 -->
+          <div class="bg-white p-8 rounded-custom shadow-sm relative cute-card fade-up"
+            style="transition-delay: 200ms;">
+            <div class="absolute -top-6 -left-2 text-brand-accent text-8xl font-serif opacity-20 pointer-events-none">"
+            </div>
+            <p class="italic text-gray-700 mb-8 relative z-10 leading-relaxed max-w-prose">"I found out about the OSCE
+              scholarship here. Currently pursuing my MA thanks to the resources shared on this platform!"</p>
+            <div class="flex items-center mt-auto">
+              <img alt="Student Profile" class="w-12 h-12 rounded-full mr-4 border-2 border-brand-primary object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqNSaFilXi6NDMLmE_59zzRXuq7CxHzMeIfIev7tFAWZ_e2Y23PTteBuW_xMF5hnxiwMAHxaQAdNaK5bu4LWr7H7m8ibLoRiuuuSVS-jeCmOAYKs1oBMRzi3T2yNMenNnEZtvrN8Yj928kdaEj4cnHYQjTgpcLyjIHEx97cpP9P_EdB-OBsA73h5T0Tuib0B_ScF_J6bvMIlIm0czt_L-lSWxNxqm9MSUC7gJ5_KCD5eUR-8I0mP-wJG2U6sNd74oXPWgxR5dXWB-k" />
+              <div>
+                <h4 class="font-bold text-sm text-brand-secondary">Amina, Alumna</h4>
+                <p class="text-xs text-gray-500 font-medium">Business Graduate</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: Section 6 -->
+
+    <!-- BEGIN: Section 7 - Placeholder for 3rd Party Content -->
+    <section class="py-16 bg-white border-t border-gray-100" id="social-feed">
+      <div class="container mx-auto px-4 fade-up">
+        <h2 class="text-3xl font-bold text-brand-secondary mb-2 text-center">AUCA on Socials</h2>
+        <p class="text-gray-600 text-center mb-10">Stay updated with the latest from our official channels.</p>
+
+        <div
+          class="max-w-4xl mx-auto bg-gray-50 border border-gray-200 rounded-custom p-10 text-center h-64 flex flex-col items-center justify-center relative overflow-hidden"
+          id="api-placeholder">
+          <!-- decorative icons floating behind -->
+          <div class="absolute inset-0 opacity-5 pointer-events-none flex justify-around items-center">
+            <svg class="w-24 h-24" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+            </svg>
+            <svg class="w-24 h-24" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 0C5.372 0 0 5.373 0 12s5.372 12 12 12 12-5.373 12-12S18.628 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.941z" />
+            </svg>
+          </div>
+          <div class="relative z-10">
+            <svg class="w-12 h-12 mx-auto text-gray-400 mb-4 animate-bounce" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+              </path>
+            </svg>
+            <h3 class="font-bold text-gray-600 text-lg">Third-Party Feed Placeholder</h3>
+            <p class="text-sm text-gray-400 mt-2 max-w-sm mx-auto">This section will dynamically fetch content from
+              Instagram, Telegram, and other web APIs once connected.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: Section 7 -->
+  </main>
+
+  <!-- BEGIN: Footer -->
+  <footer class="bg-white border-t py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-8 mb-8">
+        <div class="col-span-1 md:col-span-2">
+          <div class="flex items-center space-x-2 mb-4">
+            <div class="w-8 h-8 bg-brand-secondary rounded-full flex items-center justify-center">
+              <span class="text-xs text-white">🦅</span>
+            </div>
+            <span class="text-lg font-bold text-brand-secondary">AUCA Women</span>
+          </div>
+          <p class="text-sm text-gray-500 max-w-sm">
+            American University of Central Asia<br />
+            7/2 Aaly Tokombaev St., Bishkek, Kyrgyz Republic<br />
+            A dedicated portal for academic excellence and safety.
+          </p>
+        </div>
+        <div>
+          <h5 class="font-bold text-brand-secondary mb-4 uppercase text-xs tracking-widest">Resources</h5>
+          <ul class="text-sm space-y-3 text-gray-600">
+            <li><a class="hover:text-brand-primary transition-colors" href="#">Academic Advising</a></li>
+            <li><a class="hover:text-brand-primary transition-colors" href="#">Career Center</a></li>
+            <li><a class="hover:text-brand-primary transition-colors" href="#">Student Life</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-bold text-brand-secondary mb-4 uppercase text-xs tracking-widest">Contact</h5>
+          <ul class="text-sm space-y-3 text-gray-600">
+            <li><a href="mailto:women@auca.kg" class="hover:text-brand-primary transition-colors flex items-center"><svg
+                  class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                  </path>
+                </svg> women@auca.kg</a></li>
+            <li><a href="tel:+996312915000" class="hover:text-brand-primary transition-colors flex items-center"><svg
+                  class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                  </path>
+                </svg> +996 (312) 915-000</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400">
+        <p class="mb-4 md:mb-0">© 2023 AUCA Women’s Community Platform. All rights reserved.</p>
+        <div class="flex space-x-6">
+          <a class="hover:text-brand-primary transition-colors" href="#">Privacy Policy</a>
+          <a class="hover:text-brand-primary transition-colors" href="#">Terms of Use</a>
+          <a class="hover:text-brand-primary transition-colors" href="#">WCAG Compliance</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- END: Footer -->
+
+  <script>
+    // Mobile Menu Toggle
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuBtn = document.getElementById('mobile-menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+      // Toggle menu open/close
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // Close menu when a link is clicked
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+
+      // Intersection Observer for scroll animations (fade-up)
+      const fadeElements = document.querySelectorAll('.fade-up');
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            // Unobserve after animating once
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      fadeElements.forEach(el => observer.observe(el));
+    });
+  </script>
+</body>
+
+</html>
