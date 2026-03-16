@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -39,7 +38,6 @@
   <link rel="stylesheet" href="style.css">
   <!-- END: Font & Style Setup -->
 </head>
-
 <body class="font-sans text-gray-900 leading-relaxed">
   <!-- BEGIN: Navigation & Hero -->
   <header class="bg-white border-b sticky top-0 z-50 shadow-sm relative">
@@ -59,7 +57,6 @@
         <a class="hover:text-brand-primary transition-colors" href="#opportunities">Opportunities</a>
         <a class="hover:text-brand-primary transition-colors" href="#events">Events</a>
         <a class="hover:text-brand-primary transition-colors" href="#safety">Safety</a>
-
         <!-- Placeholder: Login/Register -->
         <div class="border-l pl-6 ml-2 flex space-x-4 items-center" id="auth-placeholder">
           <button class="text-brand-primary hover:text-brand-secondary font-semibold transition-colors"
@@ -69,7 +66,6 @@
             onclick="alert('Registration functionality coming soon!')">Register</button>
         </div>
       </div>
-
       <!-- Mobile Menu Toggle -->
       <button id="mobile-menu-toggle" aria-label="Open navigation menu"
         class="md:hidden text-gray-600 focus:outline-none p-2 rounded-md hover:bg-gray-100 ml-auto">
@@ -78,7 +74,6 @@
         </svg>
       </button>
     </nav>
-
     <!-- Mobile Nav Slide Down -->
     <div id="mobile-menu"
       class="hidden absolute top-full left-0 w-full bg-white border-b shadow-lg py-4 px-6 flex-col space-y-4 font-medium md:hidden z-40 origin-top transform transition-transform duration-300">
@@ -88,7 +83,6 @@
         href="#opportunities">Opportunities</a>
       <a class="hover:text-brand-primary transition-colors block mobile-nav-link" href="#events">Events</a>
       <a class="hover:text-brand-primary transition-colors block mobile-nav-link" href="#safety">Safety</a>
-
       <!-- Placeholder: Login/Register Mobile -->
       <div class="pt-4 border-t mt-4 flex flex-col space-y-3" id="auth-placeholder-mobile">
         <button
@@ -99,7 +93,6 @@
       </div>
     </div>
   </header>
-
   <section class="bg-brand-soft py-16 md:py-24 overflow-hidden fade-up">
     <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
       <div data-purpose="hero-text" class="text-center md:text-left order-2 md:order-1">
@@ -131,7 +124,6 @@
     </div>
   </section>
   <!-- END: Navigation & Hero -->
-
   <main>
     <!-- BEGIN: Section 1 - Community & Anonymous Discussion -->
     <section class="py-16 bg-white" id="community">
@@ -167,7 +159,6 @@
                 <button class="text-xs text-gray-500 hover:text-brand-primary transition">Reply (3)</button>
                 <button class="text-xs text-gray-500 hover:text-red-500 transition">Support ❤️</button>
               </div>
-
               <!-- Placeholder: User Comments -->
               <div class="mt-4 pt-4 border-t border-gray-100 hidden" id="comments-placeholder-1">
                 <p class="text-xs text-gray-400 italic">Comments will load here dynamically...</p>
@@ -191,7 +182,6 @@
                 <button class="text-xs text-gray-500 hover:text-brand-primary transition">Reply (12)</button>
                 <button class="text-xs text-gray-500 hover:text-red-500 transition">Support ❤️</button>
               </div>
-
               <!-- Placeholder: User Comments -->
               <div class="mt-4 pt-4 border-t border-gray-100 hidden" id="comments-placeholder-2">
                 <p class="text-xs text-gray-400 italic">Comments will load here dynamically...</p>
@@ -209,7 +199,6 @@
       </div>
     </section>
     <!-- END: Section 1 -->
-
     <!-- BEGIN: Section 2 - Mentorship Directory -->
     <section class="py-16 bg-brand-soft" id="mentors">
       <div class="container mx-auto px-4">
@@ -256,7 +245,6 @@
       </div>
     </section>
     <!-- END: Section 2 -->
-
     <!-- BEGIN: Section 3 - Opportunity Board -->
     <section class="py-16 bg-white" id="opportunities">
       <div class="container mx-auto px-4">
@@ -311,7 +299,6 @@
       </div>
     </section>
     <!-- END: Section 3 -->
-
     <!-- BEGIN: Section 4 - Events & Workshops -->
     <section class="py-16 bg-brand-soft" id="events">
       <div class="container mx-auto px-4">
@@ -368,7 +355,6 @@
       </div>
     </section>
     <!-- END: Section 4 -->
-
     <!-- BEGIN: Section 5 - Safety & Mental Health -->
     <section class="py-16 bg-white" id="safety">
       <div class="container mx-auto px-4 fade-up">
@@ -433,7 +419,6 @@
       </div>
     </section>
     <!-- END: Section 5 -->
-
     <!-- BEGIN: Section 6 - Student Stories -->
     <section class="py-16 bg-brand-soft overflow-hidden">
       <div class="container mx-auto px-4">
@@ -491,44 +476,7 @@
       </div>
     </section>
     <!-- END: Section 6 -->
-
-    <!-- BEGIN: Section 7 - Placeholder for 3rd Party Content -->
-    <section class="py-16 bg-white border-t border-gray-100" id="social-feed">
-      <div class="container mx-auto px-4 fade-up">
-        <h2 class="text-3xl font-bold text-brand-secondary mb-2 text-center">AUCA on Socials</h2>
-        <p class="text-gray-600 text-center mb-10">Stay updated with the latest from our official channels.</p>
-
-        <div
-          class="max-w-4xl mx-auto bg-gray-50 border border-gray-200 rounded-custom p-10 text-center h-64 flex flex-col items-center justify-center relative overflow-hidden"
-          id="api-placeholder">
-          <!-- decorative icons floating behind -->
-          <div class="absolute inset-0 opacity-5 pointer-events-none flex justify-around items-center">
-            <svg class="w-24 h-24" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
-            </svg>
-            <svg class="w-24 h-24" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M12 0C5.372 0 0 5.373 0 12s5.372 12 12 12 12-5.373 12-12S18.628 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.941z" />
-            </svg>
-          </div>
-          <div class="relative z-10">
-            <svg class="w-12 h-12 mx-auto text-gray-400 mb-4 animate-bounce" fill="none" stroke="currentColor"
-              viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
-              </path>
-            </svg>
-            <h3 class="font-bold text-gray-600 text-lg">Third-Party Feed Placeholder</h3>
-            <p class="text-sm text-gray-400 mt-2 max-w-sm mx-auto">This section will dynamically fetch content from
-              Instagram, Telegram, and other web APIs once connected.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- END: Section 7 -->
   </main>
-
   <!-- BEGIN: Footer -->
   <footer class="bg-white border-t py-12">
     <div class="container mx-auto px-4">
@@ -583,26 +531,22 @@
     </div>
   </footer>
   <!-- END: Footer -->
-
   <script>
     // Mobile Menu Toggle
     document.addEventListener('DOMContentLoaded', () => {
       const menuBtn = document.getElementById('mobile-menu-toggle');
       const mobileMenu = document.getElementById('mobile-menu');
       const mobileLinks = document.querySelectorAll('.mobile-nav-link');
-
       // Toggle menu open/close
       menuBtn.addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden');
       });
-
       // Close menu when a link is clicked
       mobileLinks.forEach(link => {
         link.addEventListener('click', () => {
           mobileMenu.classList.add('hidden');
         });
       });
-
       // Intersection Observer for scroll animations (fade-up)
       const fadeElements = document.querySelectorAll('.fade-up');
       const observerOptions = {
@@ -610,7 +554,6 @@
         rootMargin: '0px',
         threshold: 0.1
       };
-
       const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -620,10 +563,8 @@
           }
         });
       }, observerOptions);
-
       fadeElements.forEach(el => observer.observe(el));
     });
   </script>
 </body>
-
 </html>
