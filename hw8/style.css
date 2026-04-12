@@ -109,13 +109,13 @@ body {
     grid-template-columns: minmax(100px, auto);
     
     grid-template-rows: 
-      44px      
-      126px     
-      126px     
-      126px     
-      minmax(100px, auto)     
-      448px     
-      467.5px;  
+      minmax(44px, auto)
+      minmax(126px, auto)    
+      minmax(126px, auto)    
+      minmax(126px, auto)    
+      minmax(121px, auto)    
+      minmax(448px, auto)    
+      minmax(467.5px, auto);  
 
     grid-template-areas:
       "one"
