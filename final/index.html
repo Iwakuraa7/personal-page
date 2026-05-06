@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Final Project</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <button onclick="toggleTheme()" style="position: fixed; top:0">Switch Style</button>
+    <button class="buttonMenu fa fa-bars"></button>
+
+    <div class="container">
+      <div class="box1">
+        <div class="topbar">
+          <span class="topbar-phone"><i class="fa fa-phone"></i> 050 012-02-52 | 0557-12-52-52</span>
+          <span class="topbar-link"><i class="fa fa-user"></i> Личный кабинет <i class="fa fa-caret-down"></i></span>
+          <span class="topbar-link"><i class="fa fa-heart-o"></i> Закладки (0)</span>
+          <span class="topbar-link"><i class="fa fa-shopping-cart"></i> Корзина</span>
+          <span class="topbar-link"><i class="fa fa-file-text-o"></i> Оформление заказа</span>
+        </div>
+      </div>
+
+      <div class="box2">
+        <img src="https://login.kg/image/catalog/Logo%20old.png" alt="Login.kg Logo" class="logo-img">
+      </div>
+
+      <div class="box6">
+        <div class="search-wrap">
+          <input type="text" class="search-input" placeholder="Поиск">
+          <button class="search-btn"><i class="fa fa-search"></i></button>
+        </div>
+      </div>
+
+      <div class="box7">
+        <button class="cart-btn"><i class="fa fa-shopping-cart"></i> Товаров 0 (0 сом)</button>
+      </div>
+
+      <div class="box3">
+        <div class="ulbox">
+          <ul>
+            <li class="children">Все для детей</li>
+            <li class="apple">Продукция Apple</li>
+            <li class="smartphones">Смартфоны</li>
+            <li class="huawei">Аксессуары Huawei</li>
+            <li class="tablet">Планшеты</li>
+            <li class="accs">Аксессуары</li>
+            <li class="xiomi">Аксессуары Xiaomi</li>
+            <li class="smartclock">Смарт - часы</li>
+            <li class="audio">Audio устр-а</li>
+            <li class="electrical">Сетевое оборуд-е</li>
+            <li class="tv">Телевизоры</li>
+            <li class="shop">Торговое оборуд-е</li>
+            <li class="comp">Компьютеры и аксессуары</li>
+            <li class="microclimat">Микроклимат</li>
+            <li class="server">Серверное оборудование</li>
+            <li class="transport">Транспорт</li>
+            <li class="healthcare">Товары для здоровья</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="box4">
+        <div class="hero-banner">
+          <img
+            src="https://cdn.imgchest.com/files/3509484d6c8e.png"
+            alt="Чистый воздух — залог здоровья"
+            class="hero-full-img"
+          >
+        </div>
+        <div class="slider-dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+
+      <div class="box5">
+        <h2 class="section-title">Акции</h2>
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="https://cdn.imgchest.com/files/8c67255af4e2.png" alt="PlayStation 5 Digital">
+            </div>
+            <div class="product-info">
+              <a href="#" class="product-title">Игровая приставка Sony PlayStation 5 Digital Edition 825GB</a>
+              <p class="product-desc">Молниеносная скорость Невероятно мощные центр..</p>
+              <div class="product-price">
+                <span class="price-new">56600 сом</span>
+                <span class="price-old">57700 сом</span>
+              </div>
+            </div>
+            <div class="product-actions">
+              <button class="btn-buy-1click">КУПИТЬ В 1 КЛИК</button>
+            </div>
+            <div class="product-footer">
+              <button class="btn-cart"><i class="fa fa-shopping-cart"></i> КУПИТЬ</button>
+              <button class="btn-wish"><i class="fa fa-heart-o"></i></button>
+              <button class="btn-compare"><i class="fa fa-bars"></i></button>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="https://cdn.imgchest.com/files/9329e91b3cdd.png" alt="PlayStation 5 825Gb CN">
+            </div>
+            <div class="product-info">
+              <a href="#" class="product-title">Игровая приставка Sony PlayStation 5 с дисководом 825Gb CN</a>
+              <p class="product-desc">Молниеносная скорость Невероятно мощные центр..</p>
+              <div class="stars">
+                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+              </div>
+              <div class="product-price">
+                <span class="price-new">59900 сом</span>
+                <span class="price-old">62700 сом</span>
+              </div>
+            </div>
+            <div class="product-actions">
+              <button class="btn-buy-1click">КУПИТЬ В 1 КЛИК</button>
+            </div>
+            <div class="product-footer">
+              <button class="btn-cart"><i class="fa fa-shopping-cart"></i> КУПИТЬ</button>
+              <button class="btn-wish"><i class="fa fa-heart-o"></i></button>
+              <button class="btn-compare"><i class="fa fa-bars"></i></button>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="https://cdn.imgchest.com/files/ae12e177ffbf.png" alt="MacBook Air M1">
+            </div>
+            <div class="product-info">
+              <a href="#" class="product-title">Ноутбук Apple MacBook Air 13.3" 2020 Apple M1 (8+256GB SSD)</a>
+              <p class="product-desc">MacBook AirC новой силой.С появлением чипа Apple М..</p>
+              <div class="stars">
+                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+              </div>
+              <div class="product-price">
+                <span class="price-new">84700 сом</span>
+                <span class="price-old">85900 сом</span>
+              </div>
+            </div>
+            <div class="product-actions">
+              <button class="btn-buy-1click">КУПИТЬ В 1 КЛИК</button>
+            </div>
+            <div class="product-footer">
+              <button class="btn-cart"><i class="fa fa-shopping-cart"></i> КУПИТЬ</button>
+              <button class="btn-wish"><i class="fa fa-heart-o"></i></button>
+              <button class="btn-compare"><i class="fa fa-bars"></i></button>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="https://cdn.imgchest.com/files/ebf2476014ba.png" alt="iPad 9 64GB">
+            </div>
+            <div class="product-info">
+              <a href="#" class="product-title">Планшет Apple iPad 9 64GB Wi-Fi</a>
+              <p class="product-desc">Так просто делать всёМощный. Простой в использован..</p>
+              <div class="product-price">
+                <span class="price-new">29800 сом</span>
+                <span class="price-old">30350 сом</span>
+              </div>
+            </div>
+            <div class="product-actions">
+              <button class="btn-buy-1click">КУПИТЬ В 1 КЛИК</button>
+            </div>
+            <div class="product-footer">
+              <button class="btn-cart"><i class="fa fa-shopping-cart"></i> КУПИТЬ</button>
+              <button class="btn-wish"><i class="fa fa-heart-o"></i></button>
+              <button class="btn-compare"><i class="fa fa-bars"></i></button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <script>
+      const buttonMenu = document.querySelector('.buttonMenu');
+      const boxThree = document.querySelector('.box3');
+
+      buttonMenu.addEventListener('click', () => {
+        buttonMenu.classList.toggle('mobileMenu');
+        boxThree.classList.toggle('mobileMenu');
+      });
+
+      function toggleTheme() {
+        var theme = document.getElementsByTagName('link')[0];
+        if (theme.getAttribute('href') == 'style.css') {
+            theme.setAttribute('href', 'style2.css');
+        } else {
+            theme.setAttribute('href', 'style.css');
+        }
+    }
+    </script>
+  </body>
+</html>
